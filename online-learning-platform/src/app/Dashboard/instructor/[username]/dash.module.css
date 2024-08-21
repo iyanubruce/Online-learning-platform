@@ -1,0 +1,15 @@
+.glass {
+    background: linear-gradient(135deg, rgb(255, 255, 255,  0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+  }
+
+@media (max-width: 767px){
+.nav{
+    background: linear-gradient(135deg, rgb(255, 255, 255,  0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    border-radius: 20px; 
+}
+}
