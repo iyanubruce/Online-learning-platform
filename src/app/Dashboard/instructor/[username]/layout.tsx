@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import DLayout from "@/components/dashLayout/DashLayout"; 
+import InSidebar from "@/components/InstructorDashboardSidebar/InSidebar";
+import type { Metadata } from "next"; 
 
 export const metadata: Metadata = {
   title: "Online Learning Platform",
@@ -15,9 +15,9 @@ export default function Layout({
   }>) {
   return (
     <div className="bg-bgColor">
-        <DLayout >
-        {children}
-        </DLayout >
+      <InSidebar >
+          {children}
+      </InSidebar>
     </div>
   )
 }
