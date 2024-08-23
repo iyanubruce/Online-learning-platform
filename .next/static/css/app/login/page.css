@@ -1,0 +1,21 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/login/login.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+.login_glass__p1YX1 {
+    background: linear-gradient(135deg, rgb(255, 255, 255,  0.1), rgb(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid black;
+  }
+
+  .login_abs__Rxsoz{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    transform-style: flat;
+  }
+  

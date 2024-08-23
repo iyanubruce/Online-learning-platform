@@ -9,8 +9,8 @@ export default function Home() {
       <div className="m-0">
         <Navbar />
         <div className={`${styles.Hero}`}>
-          <div className={`flex w-11/12`}>
-            <div className="flex flex-col justify-center mr-60">
+          <div className={`flex w-11/12 justify-center items-center gap-20`}>
+            <div className="flex flex-col justify-center">
               <span className={`${styles.hText}`}>
                 Stellar Study
               </span>
@@ -171,7 +171,8 @@ export default function Home() {
         <div className="bg-searchGray w-screen flex justify-center mt-32">
             <div className="flex flex-col w-11/12 justify-center pt-20 pb-20">
               <span className="text-white text-2xl font-bold text-center mb-20">Discover New Insights</span>
-              <div className="grid grid-col-3">
+              <div className="grid grid-cols-3 gap-4">
+
                 <div className={`${styles.insights}`}>
                   <div>
                     <Image src="/insight1.jpeg" alt="in image" fill className='rounded-3xl'/>

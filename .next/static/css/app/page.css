@@ -233,7 +233,7 @@
     background-color: rgb(50 50 50 / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
-  box-shadow: 10px 10px 20px white
+  box-shadow: 5px 5px 10px white
 }
 
 .app_insights__6tDzE div:nth-child(1) {
