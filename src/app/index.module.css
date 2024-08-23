@@ -28,7 +28,7 @@
   }
 
   .AnounCont{
-    @apply w-10/12 mt-7 bg-searchGray flex flex-col items-center pt-6 pb-6 rounded-[1rem]
+    @apply w-full mt-7 bg-searchGray flex flex-col items-center pt-6 pb-6 rounded-[1rem]
   }
 
   .AnounCont span:nth-child(1){
@@ -59,11 +59,11 @@
 }
 
 .features{
-    @apply w-64 h-60 bg-searchGray rounded-2xl
+    @apply h-60 bg-searchGray rounded-lg
 }
 
 .features div:nth-child(1){
-    @apply w-full h-2/3 relative rounded-2xl
+    @apply w-full h-2/3 relative rounded-lg
 }
 
 .features span{
@@ -71,11 +71,11 @@
 }
 
 .insights{
-  @apply flex flex-col w-[30%] bg-searchGray h-72 text-white rounded-3xl
+  @apply flex flex-col bg-searchGray h-72 text-white rounded-3xl
 }
 
 .insights{
-  box-shadow: 1px 1px 1px white;
+  box-shadow: 10px 10px 20px white;
 }
 
 .insights div:nth-child(1){

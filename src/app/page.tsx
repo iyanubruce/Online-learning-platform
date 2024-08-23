@@ -6,7 +6,7 @@ import Footer from "@/components/Footer/Footer";
 export default function Home() {
   return (
     <>
-      <div className="container">
+      <div className="m-0">
         <Navbar />
         <div className={`${styles.Hero}`}>
           <div className={`flex w-11/12`}>
@@ -31,6 +31,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
         <div className={`w-screen flex flex-col items-center`}>
           <span className="text-4xl text-white font-bold">
             Categories
@@ -48,9 +49,9 @@ export default function Home() {
             ))}
           </div>
           <div className={`w-screen flex justify-center mt-20`}>
-            <div className="w-11/12 flex">
-              <div className="w-4/12 flex flex-col items-center">
-                <div className="w-10/12 bg-searchGray h-16 flex items-center gap-4 pl-6 rounded-xl">
+            <div className="w-11/12 grid gap-4 grid-cols-12">
+              <div className="col-span-3 flex flex-col items-center">
+                <div className="w-full bg-searchGray h-16 flex items-center gap-4 pl-6 rounded-xl">
                   <Image src="/icon.svg" alt='icon' width={30} height={30}/> <span className="text-2xl text-white font-bold">Manage Users</span>
                 </div>
                 <div className={`${styles.AnounCont}`}>
@@ -89,12 +90,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="w-8/12">
+
+              <div className="col-span-9">
                 <div className="w-full bg-searchGray h-16 mb-7 flex items-center gap-4 pl-6 rounded-xl">
                   <Image src="/Herowithoutbg.svg" alt='icon' width={30} height={30}/>
                   <span className="text-2xl text-white font-bold">Features</span>
                 </div>
-                <div className="flex flex-wrap justify-between gap-y-5 mb-20">
+                <div className=" grid grid-cols-3 gap-4 justify-between gap-y-5 mb-20">
                   <div className={`${styles.features}`}>
                     <div>
                       <Image src={`/Interactive.png`} fill alt='featuresImage' className="rounded-2xl"/>
@@ -148,14 +150,14 @@ export default function Home() {
                   <Image src="/paw.svg" alt='icon' width={30} height={30}/>
                   <span className="text-2xl text-white font-bold">Top Course Categories</span>
                 </div>
-                <div className="flex w-full justify-between">
-                  <div className="flex flex-col justify-center items-center w-[48%] h-64 bg-cover bg-center relative" style={{background: `url(/Softwaredev.jpg)`}}>
+                <div className="grid grid-cols-2 gap-5 w-full">
+                  <div className="flex flex-col justify-center items-center h-64 bg-cover bg-center relative" style={{background: `url(/Softwaredev.jpg)`}}>
                     <span className="text-white text-xl font-bold mb-3 z-10">Software Development</span>
                     <span className="text-white mb-3 z-10">Boost your tech career with certifications </span>
                     <button className="bg-btnColor text-white rounded-xl p-4 text-xl z-10">Enroll Now</button>
                     <div className="w-full h-full bg-gray-900 z-0 absolute top-0 left-0 opacity-[0.7]"></div>
                   </div> 
-                  <div className="flex flex-col justify-center bg-searchGray items-center w-[48%] h-64 bg-cover bg-center relative" style={{background:`url(/artDesign.avif)`}}>
+                  <div className="flex flex-col justify-center bg-searchGray items-center  h-64 bg-cover bg-center relative" style={{background:`url(/artDesign.avif)`}}>
                     <span className="text-white text-xl font-bold mb-3 z-10">Software Development</span>
                     <span className="text-white mb-3 z-10">Boost your tech career with certifications </span>
                     <button className="bg-btnColor p-4 text-white rounded-xl text-xl z-10">Enroll Now</button>
@@ -169,7 +171,7 @@ export default function Home() {
         <div className="bg-searchGray w-screen flex justify-center mt-32">
             <div className="flex flex-col w-11/12 justify-center pt-20 pb-20">
               <span className="text-white text-2xl font-bold text-center mb-20">Discover New Insights</span>
-              <div className="flex justify-between">
+              <div className="grid grid-col-3">
                 <div className={`${styles.insights}`}>
                   <div>
                     <Image src="/insight1.jpeg" alt="in image" fill className='rounded-3xl'/>
@@ -185,6 +187,7 @@ export default function Home() {
                     <span>by Stellar Study</span>
                   </div>
                 </div>
+               
                 <div className={`${styles.insights}`}>
                   <div>
                     <Image src="/insight2.jpeg" alt="in image" fill className='rounded-3xl'/>
@@ -200,6 +203,7 @@ export default function Home() {
                     <span>by Stellar Study</span>
                   </div>
                 </div>
+               
                 <div className={`${styles.insights}`}>
                   <div>
                     <Image src="/insight3.jpeg" alt="in image" fill className='rounded-3xl'/>
