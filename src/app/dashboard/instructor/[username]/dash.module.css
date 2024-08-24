@@ -1,0 +1,67 @@
+.glass {
+    background: linear-gradient(135deg, rgb(255, 255, 255,  0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+  }
+
+@media (max-width: 767px){
+.nav{
+    background: linear-gradient(135deg, rgb(255, 255, 255,  0.1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    border-radius: 20px; 
+}
+}
+
+.analytics{
+  @apply flex flex-col rounded border border-gray-500 p-5
+}
+
+.analytics div:nth-child(1){
+  @apply flex justify-between pb-2
+}
+
+.analytics div:nth-child(2){
+  @apply text-2xl font-bold
+}
+
+.analytics div:nth-child(3){
+  @apply text-xs 
+}
+
+.list{
+  @apply grid lg:grid-cols-12 grid-cols-3 auto-rows-auto
+}
+
+.list div:nth-child(1){
+  @apply col-span-1
+}
+
+.list div:nth-child(2){
+  @apply lg:col-span-3
+}
+
+.list div:nth-child(3){
+  @apply lg:col-span-3 lg:block hidden
+}
+
+.list div:nth-child(4){
+  @apply lg:col-span-1 
+}
+
+.list div:nth-child(5){
+  @apply lg:col-span-2 lg:block hidden
+}
+
+.list div:nth-child(6){
+  @apply lg:col-span-2 lg:block hidden
+}
+
+.header div{
+  @apply py-2 text-gray-500
+}
+
+.content div{
+  @apply flex items-center border-b border-gray-600 h-[90px]
+}

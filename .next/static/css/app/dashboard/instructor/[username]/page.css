@@ -1,0 +1,127 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/dashboard/instructor/[username]/dash.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+.dash_glass__9x83j {
+    background: linear-gradient(135deg, rgb(255, 255, 255,  0.1), rgb(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+  }
+
+@media (max-width: 767px){
+.dash_nav__s_MAc{
+    background: linear-gradient(135deg, rgb(255, 255, 255,  0.1), rgb(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    --webkit-backdrop-filter: blur(10px);
+    border-radius: 20px; 
+}
+}
+
+.dash_analytics__QdRKz {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(107 114 128 / var(--tw-border-opacity));
+    padding: 1.25rem;
+}
+
+.dash_analytics__QdRKz div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+
+.dash_analytics__QdRKz div:nth-child(2) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.dash_analytics__QdRKz div:nth-child(3) {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.dash_list__JXFrk {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (min-width: 1024px) {
+
+    .dash_list__JXFrk {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+}
+
+.dash_list__JXFrk div:nth-child(1) {
+    grid-column: span 1 / span 1;
+}
+
+@media (min-width: 1024px) {
+
+    .dash_list__JXFrk div:nth-child(2) {
+        grid-column: span 3 / span 3;
+    }
+}
+
+.dash_list__JXFrk div:nth-child(3) {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+
+    .dash_list__JXFrk div:nth-child(3) {
+        grid-column: span 3 / span 3;
+        display: block;
+    }
+
+    .dash_list__JXFrk div:nth-child(4) {
+        grid-column: span 1 / span 1;
+    }
+}
+
+.dash_list__JXFrk div:nth-child(5) {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+
+    .dash_list__JXFrk div:nth-child(5) {
+        grid-column: span 2 / span 2;
+        display: block;
+    }
+}
+
+.dash_list__JXFrk div:nth-child(6) {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+
+    .dash_list__JXFrk div:nth-child(6) {
+        grid-column: span 2 / span 2;
+        display: block;
+    }
+}
+
+.dash_header__o5moB div {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.dash_content__EovH9 div {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}

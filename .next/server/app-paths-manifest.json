@@ -1,3 +1,6 @@
 {
-  "/Dashboard/instructor/[username]/page": "app/Dashboard/instructor/[username]/page.js"
+  "/page": "app/page.js",
+  "/dashboard/instructor/[username]/page": "app/dashboard/instructor/[username]/page.js",
+  "/dashboard/instructor/[username]/create-course/page": "app/dashboard/instructor/[username]/create-course/page.js",
+  "/dashboard/instructor/[username]/create-course/course-create/page": "app/dashboard/instructor/[username]/create-course/course-create/page.js"
 }

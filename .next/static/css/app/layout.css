@@ -717,6 +717,18 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-\[80\] {
+  height: 80;
+}
+.h-\[80\%\] {
+  height: 80%;
+}
+.h-\[90\%\] {
+  height: 90%;
+}
+.h-\[85\%\] {
+  height: 85%;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -850,8 +862,17 @@ video {
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .overflow-scroll {
   overflow: scroll;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 .rounded {
   border-radius: 0.25rem;
@@ -932,6 +953,10 @@ video {
 }
 .bg-transparent {
   background-color: transparent;
+}
+.bg-pink-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
 }
 .bg-cover {
   background-size: cover;
@@ -1194,5 +1219,9 @@ body{
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

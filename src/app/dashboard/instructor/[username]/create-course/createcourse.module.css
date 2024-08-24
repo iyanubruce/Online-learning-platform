@@ -1,0 +1,39 @@
+.list{
+    @apply grid lg:grid-cols-12 grid-cols-3 auto-rows-auto
+  }
+  
+  .list div:nth-child(1){
+    @apply col-span-1
+  }
+  
+  .list div:nth-child(2){
+    @apply lg:col-span-3
+  }
+  
+  .list div:nth-child(3){
+    @apply lg:col-span-3 lg:block hidden
+  }
+  
+  .list div:nth-child(4){
+    @apply lg:col-span-1 
+  }
+  
+  .list div:nth-child(5){
+    @apply lg:col-span-2 lg:block hidden
+  }
+  
+  .list div:nth-child(6){
+    @apply lg:col-span-2 lg:block hidden
+  }
+  
+  .header div{
+    @apply py-2 text-gray-500
+  }
+  
+  .content div{
+    @apply flex items-center border-b border-gray-600 h-[90px]
+  }
+
+  .hidden2{
+    @apply lg:block hidden
+  }
