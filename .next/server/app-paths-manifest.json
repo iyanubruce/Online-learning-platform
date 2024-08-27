@@ -1,6 +1,6 @@
 {
   "/page": "app/page.js",
-  "/dashboard/instructor/[username]/page": "app/dashboard/instructor/[username]/page.js",
-  "/dashboard/instructor/[username]/create-course/page": "app/dashboard/instructor/[username]/create-course/page.js",
-  "/dashboard/instructor/[username]/create-course/course-create/page": "app/dashboard/instructor/[username]/create-course/course-create/page.js"
+  "/courses/page": "app/courses/page.js",
+  "/dashboard/student/[username]/page": "app/dashboard/student/[username]/page.js",
+  "/dashboard/student/[username]/courses/page": "app/dashboard/student/[username]/courses/page.js"
 }

@@ -2,7 +2,7 @@ import InSidebar from "@/components/InstructorDashboardSidebar/InSidebar";
 import type { Metadata } from "next"; 
 
 export const metadata: Metadata = {
-  title: "Online Learning Platform",
+  title: "Instructor DashBoard",
   description: "Online Learning Platform",
 };
 

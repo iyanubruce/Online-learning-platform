@@ -12,27 +12,27 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/dashboard/instructor/[username]/page": [
+    "/dashboard/student/[username]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/dashboard/instructor/[username]/page.css",
-      "static/chunks/app/dashboard/instructor/[username]/page.js"
+      "static/css/app/dashboard/student/[username]/page.css",
+      "static/chunks/app/dashboard/student/[username]/page.js"
     ],
-    "/dashboard/instructor/[username]/layout": [
+    "/dashboard/student/[username]/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/instructor/[username]/layout.js"
+      "static/chunks/app/dashboard/student/[username]/layout.js"
     ],
-    "/dashboard/instructor/[username]/create-course/page": [
+    "/dashboard/student/[username]/courses/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/dashboard/instructor/[username]/create-course/page.css",
-      "static/chunks/app/dashboard/instructor/[username]/create-course/page.js"
+      "static/chunks/app/dashboard/student/[username]/courses/page.js"
     ],
-    "/dashboard/instructor/[username]/create-course/course-create/page": [
+    "/courses/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/dashboard/instructor/[username]/create-course/course-create/page.js"
+      "static/css/app/courses/page.css",
+      "static/chunks/app/courses/page.js"
     ]
   }
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import { orders } from '@/components/Arrays/orders'
 import Image from 'next/image'
 import styles from "./createcourse.module.css"
+import Link from "next/link"
 import { useRouter, usePathname } from 'next/navigation'
 export default function page() {
   const router = useRouter()
@@ -42,7 +43,7 @@ export default function page() {
           </div>
           <div className="overflow-y-scroll h-[90%]">
           {orders.map((course, index) => (
-            <div key={index} className={`${styles.list} ${styles.content}`}>
+            <Link href={`/dashboard/instructor/${username}/create-course/editcourse/${course.name}`} key={index} className={`${styles.list} ${styles.content}`}>
             <div>
               <Image src={course.imageurl} width={60} height={60} alt="hs" />
             </div>
@@ -61,7 +62,7 @@ export default function page() {
             <div>
               {course.createdAt}
             </div>
-          </div>
+          </Link>
           ))}
           </div>
         </div>
