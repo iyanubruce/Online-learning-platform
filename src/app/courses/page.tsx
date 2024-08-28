@@ -3,6 +3,7 @@ import React from 'react'
 import Image from "next/image"
 import { courses } from '@/components/Arrays/courses'
 import CoursecardS from '@/components/SearchCoursecard/CoursecardS'
+import Footer from '@/components/Footer/Footer'
 export default function Courses() {
   return (
     <div>
@@ -26,13 +27,14 @@ export default function Courses() {
                 </div>
             </div>
         </div>
-        <div>
-            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2'>
+        <div className='flex justify-center mb-7'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-11/12 lg:gap-y-3'>
                 {courses.map((course, index)=> (
                     <CoursecardS key={index} title={course.courseTitle} author={course.author} category={course.courseCategory} description={course.shortDescription} link={course.link} lessons={course.lessons} price={course.price}/>
                 ))}
             </div>
         </div>
+        <Footer />
     </div>
   )
 }

@@ -9,9 +9,19 @@ module.exports = {
       colors: {
         "btnColor": "#8211e7",
         "textGray": "#bababa",
-        "searchGray": "#323232"
+        "searchGray": "#323232",
+        "bgColor": "#161616"
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.mask-image-custom': {
+          WebkitMaskImage: 'linear-gradient(#000, rgb(0,0,0,0.2))',
+          maskImage: 'linear-gradient(#000, rgb(0,0,0,0.2))',
+        }
+      })
+    }
+  ],
 }

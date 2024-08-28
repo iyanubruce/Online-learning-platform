@@ -90,3 +90,18 @@ export const courses = [
     price: '89.99'
   }
 ];
+
+export const courseFeatures = [
+  { title: "Prepare for Industry Certification Exam" },
+  { title: "Earn Certification that is Proof of your Competence" },
+  { title: "Hours and Hours of Video Instruction" },
+  { title: "Dozens of Code Examples to Download and Study" },
+  { title: "Over 25 Engaging Lab Exercises" },
+  { title: "All Lab Solutions" },
+  { title: "Instructor Available by Email or on the Forums" },
+  { title: "All Free Tools" },
+  { title: "Comprehensive Coverage of HTML and CSS" },
+  { title: "Client Side Programming with JavaScript" },
+  { title: "Server Side Development with PHP" },
+  { title: "Learn Database Development with MySQL" }
+];
