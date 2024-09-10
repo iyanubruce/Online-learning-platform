@@ -1,12 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
 
-body{
-    background-color: #161616;
-    width: 100vw;
-    height: 100vh;
-    overflow: scroll;
-    color: white;
+@import url("https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  color: white;
+  font-family: "Saira", sans-serif;
+}
+
+.saira {
+  font-family: var(--font-Saira);
+}
+
+.rowdies {
+  font-family: var(--font-rowdies);
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px; /* Smaller screens (1rem = 14px) */
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px; /* Medium screens (1rem = 15px) */
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px; /* Larger screens (1rem = 16px) */
+  }
 }

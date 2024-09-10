@@ -1,20 +1,19 @@
-.cont{
-    @apply w-[100vw] text-white flex justify-center pt-4
+.cont {
+  @apply w-[100vw] text-white flex justify-center pt-4 pb-5;
 }
 
-.icont{
-    @apply w-11/12 align-middle flex gap-4 items-center
+.icont {
+  @apply w-[84%] align-middle flex gap-4 items-center;
 }
 
-.logo{
-    @apply text-purple-200 text-xl font-extrabold
+.logo {
+  @apply text-[#04016C] text-lg font-extrabold;
 }
 
-.SignIn{
-    @apply bg-btnColor p-3 rounded-md text-xl font-bold
+.SignIn {
+  @apply btn-linear-gradient py-[0.6rem] px-[1.4rem] rounded-md font-medium text-base;
 }
 
-.login{
-    @apply border-2 p-3 rounded text-xl font-bold border-btnColor text-btnColor
+.login {
+  @apply underline underline-offset-4 rounded font-medium border-btnColor text-btnColor;
 }
-

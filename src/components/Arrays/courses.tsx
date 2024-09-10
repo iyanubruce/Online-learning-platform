@@ -105,3 +105,38 @@ export const courseFeatures = [
   { title: "Server Side Development with PHP" },
   { title: "Learn Database Development with MySQL" }
 ];
+
+
+type Rating = {
+  name: string;
+  rating: number;
+  comment: string;
+  datePosted: string;
+};
+
+export const ratings: Rating[] = [
+  {
+    name: "John Doe",
+    rating: 4.5,
+    comment: "Great product, highly recommend!",
+    datePosted: "2024-08-25",
+  },
+  {
+    name: "Jane Smith",
+    rating: 3.8,
+    comment: "Good, but could be improved in some areas.",
+    datePosted: "2024-08-26",
+  },
+  {
+    name: "Emily Johnson",
+    rating: 5.0,
+    comment: "Excellent! Exceeded my expectations.",
+    datePosted: "2024-08-27",
+  },
+  {
+    name: "Michael Brown",
+    rating: 2.7,
+    comment: "Not satisfied with the quality.",
+    datePosted: "2024-08-28",
+  },
+];

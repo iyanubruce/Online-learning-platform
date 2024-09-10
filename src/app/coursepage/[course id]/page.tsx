@@ -1,10 +1,15 @@
+'use client'
 import React from 'react'
 import Navbar from '@/components/Navbar/Navbar'
 import Image from 'next/image'
 import Footer from '@/components/Footer/Footer'
 import Link from "next/link"
-import { courseFeatures } from '@/components/Arrays/courses'
+import { useState } from 'react'
+import { courseFeatures, ratings } from '@/components/Arrays/courses'
+import CommentCard from '@/components/commentCard/commentCard'
 export default function CoursePage() {
+  const [descOpen, setDescOpen] = useState(true);
+
   return (
     <>
       <Navbar />
@@ -84,76 +89,39 @@ export default function CoursePage() {
             }
           </div>
           <h3 className='text-2xl font-semibold leading-6 mt-10'>Requirements</h3>
-          <ul>
-            <li>There are no skill prerequisites for this course although it's helpful if you are familiar with operating your computer and using the internet.</li>
-            <li>You can take this course using a Mac, PC or Linux machine.</li>
-            <li>It is recommended that you download the free VScode text editor.</li>
+          <ul className="w-[50rem]">
+            <li className="text-sm">There are no skill prerequisites for this course although it's helpful if you are familiar with operating your computer and using the internet.</li>
+            <li className="text-sm">You can take this course using a Mac, PC or Linux machine.</li>
+            <li className="text-sm">It is recommended that you download the free VScode text editor.</li>
           </ul>
           <h3 className='text-2xl font-semibold leading-6 mt-10'>Description</h3>
-          <div className='mask-image-custom'>
-            <span>
-            Completely Updated for 2023/2024 with 40 NEW lectures coding activities and projects! 
-
-Learn What It Takes to Code Dynamic, Professional Websites and Web Apps From The Comfort of Your Own Home 
-
-Do you ever browse the internet wondering how your favorite websites were built? Facebook, Twitter, Amazon—they were all created by people who at one point in time didn’t know anything about coding. How did they obtain this knowledge? 
-
-In this comprehensive course, I’m going to show you everything you need to know so that you can follow in these people’s footsteps. 
-
-You’re going to learn how to code AND you’re going to become a certified professional from a recognized international trainer. And best of all, you’re going to have fun doing it. 
-
-You Don’t Have to Be a Genius or a Mathematical Wizard. 
-
-So many people believe that you must have a special ‘gift’ to create professional-quality, dynamic websites/web apps. I’m here to tell you once and for all that this is false. All you need to have is the desire to learn and the ability to follow instructions—that’s it! 
-
-Our course starts teaching basic coding principles and develops your coding skills in a variety of languages from beginner through to advanced. Here it is, once and for all, a complete guide that will take you from novice to web developer. 
-
-Skip Hours of Frustration and Thousands of Wasted Dollars and Become 100% Certified 
-
-The internet has changed the rules of doing business. More and more companies are migrating online while many new, never before seen businesses are created every day thanks to the power of this phenomenon. You know what that means? Higher demand for people just like you! 
-
-But the problem for these businesses is that while demand is high, supply is short. 
-
-Please don’t let a lack of knowledge stop you from having the career of your dreams, not when the knowledge you need is right here and is extremely affordable. 
-
-Don’t worry, you won’t need to buy any additional courses, it’s all here. No need to spend four years and over $15,000 per year in college tuition either—it really is all here. From HTML to CSS then to Javascript and finally PHP, you will learn how to Become a Certified Web Developer. 
-
-It Doesn’t Matter Where You’re Starting From...You Can Do It! 
-
-Maybe: 
-
-     ● You’re planning on studying coding at college and want to build a rock-solid foundation so that you have a huge head start before your course begins? 
-
-     ● You’re dissatisfied with your current job and want to learn exactly what it takes to become a fully qualified web developer? 
-
-     ● You’re currently working in IT but want to expand your skill base so that you’re 100% up to date with the latest developments in web technology? 
-
-     ● You want to develop mobile apps or websites on the side to create some additional income while retaining your current job? 
-
-Learn Skills That Will Benefit You for The Rest of Your Life 
-
-- Imagine being able to create a web app that is downloaded by millions of paying customers—or a website that’s visited by people from all seven continents. 
-
-- Imagine the limitless opportunities that having these programming skills will give you. 
-
-- Imagine working in a field that challenges you and allows you to express yourself freely every day. 
-
-- Imagine being paid extremely well for developing products and services that can help change people’s lives. 
-
-Stop imagining and take action! It’s time to start your journey. Your future is waiting for you... 
-
-
-
-Four Certifications in One
-The unique Certified Web Development Professional credential will provide proof that you have mastered the fundamental skills needed by new web developers. You'll have a full understanding of HTML5, the language used to structure web sites and many mobile applications that you use every day. From there, you'll move on to Javascript-- the language of interaction on the web. The use of Javascript is growing at a lightning pace and it's been called "the most important language to learn today," by multiple experts.
-
-Each language carries its own individual Specialist Designation for which you earn a certificate, the privilege of using the specialist credential badge, and a personal online transcript page that shows your designations, certification, and accomplishments.
-
-
-
-Prepare for Valuable Industry Certifications
-This course is specially designed to prepare you for the  Web Development Professional Certification from LearnToProgram, Inc. This certification will allow you to prove that you have achieved competencies in HTML, CSS, and JavaScript-- everything you need to create basic web applications. New for 2023:  No exams are required to earn your certifications.  Complete and submit all the lab activities for the course program and you'll earn your new certifications!
-            </span>
+          <div className={` ${descOpen ? "h-[12rem] mask-image-custom":""} w-[50rem]`}>
+            <div>
+              Completely Updated for 2023/2024 with 40 NEW lectures coding activities and projects! 
+              Learn What It Takes to Code Dynamic, Professional Websites and Web Apps From The Comfort of Your Own Home 
+              Do you ever browse the internet wondering how your favorite websites were built? Facebook, Twitter, Amazon—they were all created by people who at one point in time didn’t know anything about coding. How did they obtain this knowledge? 
+              In this comprehensive course, I’m going to show you everything you need to know so that you can follow in these people’s footsteps. 
+              You’re going to learn how to code AND you’re going to become a certified professional from a recognized international trainer. And best of all, you’re going to have fun doing it. 
+              You Don’t Have to Be a Genius or a Mathematical Wizard. 
+              So many people believe that you must have a special ‘gift’ to create professional-quality, dynamic websites/web apps. I’m here to tell you once and for all that this is false. All you need to have is the desire to learn and the ability to follow instructions—that’s it! 
+              Our course starts teaching basic coding principles and develops your coding skills in a variety of languages from beginner through to advanced. Here it is, once and for all, a complete guide that will take you from novice to web developer. 
+              Skip Hours of Frustration and Thousands of Wasted Dollars and Become 100% Certified 
+              The internet has changed the rules of doing business. More and more companies are migrating online while many new, never before seen businesses are created every day thanks to the power of this phenomenon. You know what that means? Higher demand for people just like you! 
+              But the problem for these businesses is that while demand is high, supply is short. 
+              Please don’t let a lack of knowledge stop you from having the career of your dreams, not when the knowledge you need is right here and is extremely affordable. 
+              Don’t worry, you won’t need to buy any additional courses, it’s all here. No need to spend four years and over $15,000 per year in college tuition either—it really is all here. From HTML to CSS then to Javascript and finally PHP, you will learn how to Become a Certified Web Developer.
+              It Doesn’t Matter Where You’re Starting From...You Can Do It! 
+              Maybe: hieved competencies in HTML, CSS, and JavaScript-- everything you need to create basic web applications. New for 2023:  No exams are required to earn your certifications.  Complete and submit all the lab activities for the course program and you'll earn your new certifications!
+            </div>
+          </div>
+          <button onClick={() => setDescOpen((prev) => !prev)} className={` ${descOpen ? "block":"hidden"}`}>show more </button>
+          <div className="p-5 w-[50rem] border border-dashed border-slate-600 mt-10 mb-10">
+            <h3>Featured Review</h3>
+            <div className="grid grid-cols-2 w-[50rem]">
+              {ratings.map((rating, index) => (
+                <CommentCard key={index} name={rating.name} rating={rating.rating} comment={rating.comment} datePosted={rating.datePosted}/>
+              ))}
+            </div>
           </div>
         </div>
       </div>

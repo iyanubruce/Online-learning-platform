@@ -1,4 +1,4 @@
-// File: /workspaces/Online-learning-platform/src/app/layout.tsx
+// File: /home/iyanuoluwa938/Oniline learning platform/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

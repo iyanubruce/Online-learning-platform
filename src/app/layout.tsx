@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Saira } from "@next/font/google";
+import { Rowdies } from "@next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
-
+import SessionProv from "@/components/SessionProvider/sessionProvider";
+const saira = Saira({ subsets: ["latin"], variable: "--font-Saira" });
+const rowdies = Rowdies({
+  weight: ["300", "400", "700"], // Pass an array of weights
+  variable: "--font-rowdies",
+  subsets: ["latin"],
+});
 export const metadata: Metadata = {
   title: "Online Learning Platform",
   description: "Online Learning Platform",
@@ -16,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${saira.variable} ${rowdies.variable}`}>
+        <SessionProv>{children}</SessionProv>
+      </body>
     </html>
   );
 }
