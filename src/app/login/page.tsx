@@ -35,7 +35,7 @@ export default function Login() {
         setError(data);
         return;
       }
-      dispatch(setUser(data.user));
+      // dispatch(setUser(data.user));
       setError(null);
       // router.push(`/dashboard/${data.userRole}/${data._id}`);
     } catch (error: any) {

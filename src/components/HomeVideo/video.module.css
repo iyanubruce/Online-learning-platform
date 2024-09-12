@@ -1,0 +1,26 @@
+.videobtn:after,
+.videobtn:before{
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: white;
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0.7;
+}
+
+.videobtn:before{
+	animation: pulse 2s easeout infinite;
+} 
+
+.videobtn:after{
+	animation: pulse 2s 1s easeout infinite;
+}
+
+@keyframes pulse{
+	100%{
+		transform: scale(2.5);
+		opacity: 0;
+	}
+}

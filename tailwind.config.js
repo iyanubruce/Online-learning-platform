@@ -13,7 +13,7 @@ module.exports = {
         bgColor: "#FFFFFF",
       },
       fontSize: {
-        'responsive-lg': 'calc(80px * (100vw / 1920))', // responsive font size using calc
+        "responsive-lg": "calc(80px * (100vw / 1920))", // responsive font size using calc
       },
     },
   },
@@ -27,12 +27,22 @@ module.exports = {
         ".btn-linear-gradient": {
           background: "linear-gradient(135deg, #083F9B, #7F56D9)",
         },
+        ".dark-btn-linear-gradient": {
+          background: "linear-gradient(135deg, #1b2c53, #5b3fa5);",
+        },
         ".hero-linear-gradient": {
           background: "linear-gradient(45deg, #04016C, #4A16BD)",
+        },
+        ".dark-hero-linear-gradient": {
+          background: "linear-gradient(45deg, #010034, #2C0C77);",
         },
         ".after-hero-linear-gradient": {
           background:
             "linear-gradient(180deg, #084FC7 0%, rgba(8, 79, 199, 0) 172.2%);",
+        },
+        ".dark-after-hero-linear-gradient": {
+          background:
+            "linear-gradient(180deg, #003366 0%, rgba(0, 51, 102, 0) 172.2%);" /* Dark mode */,
         },
         ".section-gradient": {
           background:
@@ -52,6 +62,9 @@ module.exports = {
         },
         ".word-spacing-3": {
           "word-spacing": "1rem",
+        },
+        ".dark-course-border": {
+          "border-style": "dashed",
         },
       });
     },

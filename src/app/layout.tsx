@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${saira.variable} ${rowdies.variable}`}>
+      <body className={`${saira.variable} ${rowdies.variable} flex flex-col items-center `}>
         <SessionProv>{children}</SessionProv>
       </body>
     </html>

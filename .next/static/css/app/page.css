@@ -1,22 +1,6 @@
 /*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/Navbar/Navbar.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************/
-.Navbar_cont__ivzpz {
-
-    display: flex;
-
-    width: 100vw;
-
-    justify-content: center;
-
-    padding-top: 1rem;
-
-    padding-bottom: 1.25rem;
-
-    --tw-text-opacity: 1;
-
-    color: rgb(255 255 255 / var(--tw-text-opacity))
-}
 
 .Navbar_icont__v0DIB {
 
@@ -278,3 +262,32 @@
   color: rgb(255 255 255 / var(--tw-text-opacity))
 }
 
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/components/HomeVideo/video.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.video_videobtn__JeY6N:after,
+.video_videobtn__JeY6N:before{
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: white;
+	z-index: -1;
+	border-radius: 50%;
+	opacity: 0.7;
+}
+
+.video_videobtn__JeY6N:before{
+	animation: video_pulse__4Hxjh 2s :local(easeout) infinite;
+} 
+
+.video_videobtn__JeY6N:after{
+	animation: video_pulse__4Hxjh 2s 1s :local(easeout) infinite;
+}
+
+@keyframes video_pulse__4Hxjh{
+	100%{
+		transform: scale(2.5);
+		opacity: 0;
+	}
+}

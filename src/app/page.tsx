@@ -1,20 +1,27 @@
+"use client";
 import Navbar from "@/components/Navbar/Navbar";
 import Image from "next/image";
 import styles from "./index.module.css";
 import { images } from "@/components/Arrays/images";
 import { courses } from "@/components/Arrays/courses";
+import HomeVideo from "@/components/HomeVideo/homeVideo";
 import Footer from "@/components/Footer/Footer";
+import Link from "next/link";
+import { useState } from "react";
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <>
-      <div className="m-0">
-        <Navbar />
+      <div className="m-0 max-w-[1500px]">
+        <Navbar dark={darkMode} />
         {/* Hero Section */}
-        <div className="flex justify-center hero-linear-gradient py-[7.1rem] isolate relative overflow-hidden">
+        <div className={`flex justify-center ${darkMode ? "dark-hero-linear-gradient": "hero-linear-gradient"} py-[7.1rem] isolate relative overflow-hidden`}>
           <Image
             src="/YoungSmilingWoman.png"
             width={450}
             height={700}
+            alt="Young smiling woman"
             className="absolute bottom-[-30%] lg:bottom-[-15px] right-[-20%] md:right-[12%] z-[-1]"
           />
           <Image
@@ -125,7 +132,7 @@ export default function Home() {
           <Image src="/brand6.svg" width={80} height={34} alt="brand6" />
         </div>
         {/* Featured courses */}
-        <div className="text-center gradient-box py-20 relative">
+        <div className={`text-center ${ darkMode ? "bg-[#161616]":"gradient-box"} py-20 relative`}>
           <Image
             src="/Circle.svg"
             width={80}
@@ -133,10 +140,10 @@ export default function Home() {
             alt="woman"
             className="absolute left-[15%]"
           />
-          <h1 className="rowdies text-3xl text-black mb-10">
+          <h1 className={`rowdies text-3xl ${darkMode ?"text-white" :"text-black"} mb-10`}>
             Featured <span className="text-[#2aaa94]">Courses</span>
           </h1>
-          <p className="text-[#4e596b] saira mb-10">
+          <p className={`${darkMode?"text-slate-100" :"text-[#4e596b]"} saira mb-10`}>
             {" "}
             Discover our top courses designed to help you learn new skills and
             achieve your goals.
@@ -146,17 +153,17 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-[6.7rem] auto-rows-[400px] gap-10">
             {courses.slice(0, 6).map((course, index) => (
-              <div key={index} className="bg-white rounded-xl">
+              <div key={index} className={`${darkMode ? "bg-transparent border border-slate-200 ": "bg-white text-[#324361]"} rounded-xl`}>
                 <div className="relative h-1/2">
                   {" "}
                   <Image
-                    src="/logo.png"
+                    src={`${course.image}`}
                     className="object-cover rounded-t-xl"
                     alt="image"
                     fill
                   />
                 </div>
-                <div className="h-1/2 p-5 flex flex-col text-[#324361] saira">
+                <div className="h-1/2 p-5 flex flex-col  saira">
                   <div className="flex justify-between text-xs ">
                     <span>5,957 students</span> <span>01h 49m</span>
                   </div>
@@ -188,12 +195,14 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <button className="saira btn-linear-gradient p-3 mt-10 font-medium text-sm rounded">
-            Explore Courses
-          </button>
+          <Link href="/courses">
+            <button className="saira btn-linear-gradient p-3 mt-10 font-medium text-sm rounded">
+              Explore Courses
+            </button>
+          </Link>
         </div>
         {/*Why Learn our courses*/}
-        <div className="btn-linear-gradient py-20 text-center flex flex-col items-center relative isolate">
+        <div className={`${darkMode?"dark-btn-linear-gradient":"btn-linear-gradient"} py-20 text-center flex flex-col items-center relative isolate`}>
           <Image
             src="CircleL1.svg"
             height={90}
@@ -477,13 +486,7 @@ export default function Home() {
         </div>
         {/*Video and reviews*/}
         <div className="flex flex-col items-center py-20 bg-gradient-to-b from-transparent to-[#dbedff]">
-          <div className="h-72 lg:h-[35rem] aspect-video relative ">
-            <video controls fill poster="/video.png" className="absolute top-0 left-0 w-full h-full object-cover">
-              <source src="video.mp4" type="video/mp4" />
-              <source src="video.webm" type="video/webm" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <HomeVideo />
           <h1 className="rowdies text-4xl text-center relative text-[#2AAA94] my-10 w-full">
             Testimonials
             <Image
