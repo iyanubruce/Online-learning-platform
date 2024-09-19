@@ -8,7 +8,9 @@ import HomeVideo from "@/components/HomeVideo/homeVideo";
 import Footer from "@/components/Footer/Footer";
 import Link from "next/link";
 import { useState } from "react";
+import {useRouter} from "next/navigation"
 export default function Home() {
+  const router = useRouter()
   const [darkMode, setDarkMode] = useState(false);
 
   return (
@@ -152,8 +154,8 @@ export default function Home() {
             various fields.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-[6.7rem] auto-rows-[400px] gap-10">
-            {courses.slice(0, 6).map((course, index) => (
-              <div key={index} className={`${darkMode ? "bg-transparent border border-slate-200 ": "bg-white text-[#324361]"} rounded-xl`}>
+            {courses.slice(-6).map((course, index) => (
+              <div key={index} onClick={()=>router.push(`${course.link}`)} className={`${darkMode ? "bg-transparent border border-slate-200 ": "bg-white text-[#324361] "} transform cursor-pointer hover:scale-[1.03] transition-transform duration-300 rounded-xl`}>
                 <div className="relative h-1/2">
                   {" "}
                   <Image
