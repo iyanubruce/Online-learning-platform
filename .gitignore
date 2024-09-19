@@ -1,3 +1,56 @@
-node_modules
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+# Dependency directories
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+
+# Production
+build/
+
+# Static files generated during builds
+.next/cache/
+.next/static/
+
+# Optional: Ignore build output for Vercel/Netlify deployment
+.vercel/
+.netlify/
+
+# Optional: Debugging
+*.swp
+*.swo
+
+# Local environment variables
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js typescript build info
+*.tsbuildinfo
+
+# IDE-specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# MacOS files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+docker-compose.debug.yml
