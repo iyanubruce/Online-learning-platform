@@ -18,6 +18,7 @@ out/
 build/
 
 # Static files generated during builds
+.next
 .next/cache/
 .next/static/
 
