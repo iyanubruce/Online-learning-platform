@@ -9,7 +9,7 @@ type title = {
     link: string,
     category: string,
     price: string,
-    dark: bolean,
+    dark: boolean,
     image: string
   }
 export default function CoursecardS({ title, description, lessons, author, link, category, price, dark, image }: title) {

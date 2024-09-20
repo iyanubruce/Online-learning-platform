@@ -1,5 +1,5 @@
 .videobtn:after,
-.videobtn:before{
+.videobtn:before {
 	content: "";
 	position: absolute;
 	height: 100%;
@@ -10,16 +10,16 @@
 	opacity: 0.7;
 }
 
-.videobtn:before{
-	animation: pulse 2s easeout infinite;
-} 
-
-.videobtn:after{
-	animation: pulse 2s 1s easeout infinite;
+.videobtn:before {
+	animation: pulse 2s ease-out infinite;
 }
 
-@keyframes pulse{
-	100%{
+.videobtn:after {
+	animation: pulse 2s 1s ease-out infinite;
+}
+
+@keyframes pulse {
+	100% {
 		transform: scale(2.5);
 		opacity: 0;
 	}

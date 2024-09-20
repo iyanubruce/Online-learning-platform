@@ -23,8 +23,8 @@
 }
 
 .Hsearch:focus {
-  border: none; /* Remove border on focus */
-  outline: none; /* Remove default focus outline */
+  border: none;
+  outline: none;
 }
 
 .AnounCont {
