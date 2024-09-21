@@ -8,7 +8,7 @@ import Footer from "@/components/Footer/Footer";
 export default function Courses() {
   const [darkMode, setDarkMode] = useState(false);
   return (
-    <div className={`${darkMode ? "bg-[#161616]" : "bg-[#f0f0f0]"} max-w-[1500px]`}>
+    <div className={`${darkMode ? "bg-[#161616]" : "bg-[#f0f0f0]"}`}>
       <button
         onClick={() => {
           setDarkMode((prev) => !prev);
@@ -67,7 +67,7 @@ export default function Courses() {
             )}
           </button>
         </span>
-        <div className="flex items-center flex-col gap-3 hidden md:block">
+        <div className="md:flex items-center flex-col gap-3 hidden ">
           <span className={`${darkMode ? "text-white" : "text-black"}`}>
             Select a Category
           </span>
@@ -97,7 +97,7 @@ export default function Courses() {
       </div>
       <div className="flex justify-center mb-7 mt-7">
         <div
-          className={`grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-3 gap-y-3 w-11/12 lg:gap-3`}
+          className={`grid max-w-[1280px] mx-auto lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-3 gap-y-3 w-11/12 lg:gap-3`}
         >
           {courses.map((course, index) => (
             <CoursecardS

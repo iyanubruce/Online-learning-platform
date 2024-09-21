@@ -85,7 +85,7 @@ export default function Home() {
               </span>
             </p>
           </div>
-          <div className="w-[84%]">
+          <div className="w-[84%] ">
             <span className="saira uppercase text-sm word-spacing-1 ">
               Successful coaches are visionaries
             </span>
@@ -153,7 +153,7 @@ export default function Home() {
             <br />
             various fields.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-[6.7rem] auto-rows-[400px] gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-1 md:px-[6.7rem] auto-rows-[400px] gap-10 mx-auto max-w-[1280px]">
             {courses.slice(-6).map((course, index) => (
               <div key={index} onClick={()=>router.push(`${course.link}`)} className={`${darkMode ? "bg-transparent border border-slate-200 ": "bg-white text-[#324361] "} transform cursor-pointer hover:scale-[1.03] transition-transform duration-300 rounded-xl`}>
                 <div className="relative h-1/2">
@@ -243,7 +243,7 @@ export default function Home() {
             advance your career
             <br /> at your own pace.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 px-20 auto-rows-[300px] w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 px-20 auto-rows-[300px] w-full mx-auto max-w-[1280px]">
             <div className="flex flex-col items-center relative">
               <Image
                 src="/Line.svg"
@@ -359,7 +359,7 @@ export default function Home() {
           <p className="text-[#4E596B] saira mb-20 text-lg font-semibold">
             12,000+ unique online courses
           </p>
-          <div className="grid md:grid-cols-3 grid-cols-2 lg:grid-cols-6 auto-rows-auto gap-5">
+          <div className="grid md:grid-cols-3 grid-cols-2 lg:grid-cols-6 auto-rows-auto gap-5 mx-auto max-w-[1280px]">
             <div className="flex-col flex items-center bg-white gap-8 rounded-xl saira font-semibold text-lg pt-6 pb-8">
               {" "}
               <Image
@@ -502,7 +502,7 @@ export default function Home() {
           <p className="saira text-black mb-5">
             What our students say about us
           </p>
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 auto-rows-auto w-full px-20 text-black">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 auto-rows-auto w-full px-20 text-black max-w-[1280px] mx-auto">
             <div className="p-5 bg-white rounded-xl flex-col flex">
               <div className="flex gap-5 items-center mb-5">
                 <Image
