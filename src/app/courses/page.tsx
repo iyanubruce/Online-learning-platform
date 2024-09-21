@@ -13,7 +13,7 @@ export default function Courses() {
         onClick={() => {
           setDarkMode((prev) => !prev);
         }}
-        className="fixed top-0 right-0 m-6 z-50"
+        className="fixed top-[72px] md:top-0 right-0 m-6 z-50"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
