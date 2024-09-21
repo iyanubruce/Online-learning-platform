@@ -8,7 +8,7 @@ type dark = {
 const Navbar = ({ dark }: dark) => {
   return (
     <div
-      className={`w-screen text-white flex justify-center pt-4 pb-5  ${dark ? "bg-[#161616]" : ""}`}
+      className={`w-full text-white pt-4 pb-5  ${dark ? "bg-[#161616]" : ""}`}
     >
       <div className={`${styles.icont} saira text-base`}>
         <Link href={"/"}>

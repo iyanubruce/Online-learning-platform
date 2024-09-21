@@ -26,7 +26,7 @@ export default function HomeVideo() {
   };
 
   return (
-    <div className="h-72 lg:h-[35rem] aspect-video relative grid place-content-center isolate ">
+    <div className="h-72 lg:h-[35rem] w-full md:w-auto md:aspect-video relative grid place-content-center isolate ">
       <video
         ref={videoRef}
         className="absolute top-0 left-0 w-full h-full object-cover z-[-2] rounded"

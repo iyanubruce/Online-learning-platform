@@ -1,5 +1,5 @@
 .icont {
-  @apply w-[84%] align-middle flex gap-4 items-center;
+  @apply w-full md:w-[84%] mx-auto align-middle flex gap-4 items-center;
 }
 
 .logo {

@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="m-0 max-w-[1500px]">
+      <div className="m-0">
         <Navbar dark={darkMode} />
         {/* Hero Section */}
         <div className={`flex justify-center ${darkMode ? "dark-hero-linear-gradient": "hero-linear-gradient"} py-[7.1rem] isolate relative overflow-hidden`}>
@@ -456,7 +456,7 @@ export default function Home() {
         </div>
         {/*About and testimonials*/}
         <div className="flex flex-col md:flex-row 2xl:justify-center justify-start items-center gap-[6.8rem] pt-20 md:mb-0 mb-10">
-          <div className=" w-96 aspect-square ml-[6.8rem] relative">
+          <div className=" w-96 aspect-square md:ml-[6.8rem] relative">
             <Image src="/education.svg" fill alt="education" />
           </div>
           <div className="relative">

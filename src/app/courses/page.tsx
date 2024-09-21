@@ -67,7 +67,7 @@ export default function Courses() {
             )}
           </button>
         </span>
-        <div className="flex items-center flex-col gap-3">
+        <div className="flex items-center flex-col gap-3 hidden md:block">
           <span className={`${darkMode ? "text-white" : "text-black"}`}>
             Select a Category
           </span>
@@ -97,7 +97,7 @@ export default function Courses() {
       </div>
       <div className="flex justify-center mb-7 mt-7">
         <div
-          className={`grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 w-11/12 lg:gap-3`}
+          className={`grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-x-3 gap-y-3 w-11/12 lg:gap-3`}
         >
           {courses.map((course, index) => (
             <CoursecardS

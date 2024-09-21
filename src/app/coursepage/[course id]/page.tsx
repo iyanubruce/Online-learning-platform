@@ -210,7 +210,7 @@ export default function CoursePage() {
             </div>
           </div>
         </div>
-        <div className="pl-10">
+        <div className="md:pl-10">
           <div className=" w-full lg:w-[50rem] border border-dashed border-slate-600 p-5 mt-10">
             <h3 className="text-2xl font-semibold leading-6">
               What you'll Learn
@@ -245,13 +245,13 @@ export default function CoursePage() {
           <p className="font-extralight font-sm saira">
             9 sections &bull; 10 lessons &bull; 5h 10m total lenght
           </p>
-          <div className="lg:w-[50rem] border border-dashed border-slate-600">
+          <div className="w-full lg:w-[50rem] border border-dashed border-slate-600">
             <Accordion />
           </div>
           <h3 className="text-2xl font-semibold leading-6 mt-10 mb-5">
             Requirements
           </h3>
-          <ul className="w-[50rem]">
+          <ul className="w-full md:w-[50rem]">
             <li className="text-sm">
               There are no skill prerequisites for this course although it's
               helpful if you are familiar with operating your computer and using
@@ -280,7 +280,7 @@ export default function CoursePage() {
           </button>
           <div className="p-5 w-full md:w-[50rem] border border-dashed border-slate-600 mt-10 mb-10">
             <h3 className="rowdies text-">Featured Reviews</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 w-[50rem] mt-5 gap-y-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 w-full md:w-[50rem] mt-5 gap-y-5">
               {ratings.map((rating, index) => (
                 <CommentCard
                   key={index}
