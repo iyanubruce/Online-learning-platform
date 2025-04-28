@@ -30,9 +30,7 @@ export default function page() {
     };
   }, [imageSrc]);
   return (
-    <form
-      action="submit"
-      className="p-5 text-white grid grid-cols-12 gap-5 lg:grid-rows-12 h-full lg:h-[600px] ">
+    <div className="p-5 text-white grid grid-cols-12 gap-5 lg:grid-rows-12 h-full lg:h-[600px] ">
       <div className="lg:col-span-7 col-span-12 row-span-6 border border-zinc-400 rounded p-3">
         <header>
           <h1 className="text-lg font-bold pb-3">Course Details</h1>
@@ -173,6 +171,6 @@ export default function page() {
           </div>
         </div>
       </div>
-    </form>
+    </div>
   );
 }
