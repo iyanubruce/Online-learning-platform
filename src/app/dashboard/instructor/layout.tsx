@@ -1,23 +1,21 @@
 import InSidebar from "@/components/InstructorDashboardSidebar/InSidebar";
-import type { Metadata } from "next"; 
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Instructor DashBoard",
   description: "Online Learning Platform",
 };
 
-import React from 'react'
+import React from "react";
 
 export default function Layout({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <div className="bg-bgColor">
-      <InSidebar >
-          {children}
-      </InSidebar>
+    <div className="bg-black">
+      <InSidebar>{children}</InSidebar>
     </div>
-  )
+  );
 }
