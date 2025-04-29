@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import styles from "./login.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { RootState, AppDispatch } from "../../redux/store";
-import { setUser } from "@/redux/user/userSlice";
+import { RootState, AppDispatch } from "@/components/store/store";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
@@ -46,15 +45,13 @@ export default function Login() {
   return (
     <div className="w-screen h-screen bg-[#171717] text-white flex justify-center items-center relative">
       <div
-        className={`w-96 h-96 ${styles.glass} px-10 flex flex-col items-center z-10 shadow-pink-400`}
-      >
+        className={`w-96 h-96 ${styles.glass} px-10 flex flex-col items-center z-10 shadow-pink-400`}>
         <span className="mb-10">
           <Image src="/Herowithoutbg.svg" width={100} height={100} alt="icon" />
         </span>
         <form
           className="flex flex-col items-center w-full"
-          onSubmit={handleSubmit}
-        >
+          onSubmit={handleSubmit}>
           <input
             type="text"
             name="email"
@@ -73,8 +70,7 @@ export default function Login() {
           />
           <button
             type="submit"
-            className="bg-btnColor w-32 h-12 text-white text-xl font-bold flex justify-center items-center rounded-2xl"
-          >
+            className="bg-btnColor w-32 h-12 text-white text-xl font-bold flex justify-center items-center rounded-2xl">
             Login
           </button>
 
