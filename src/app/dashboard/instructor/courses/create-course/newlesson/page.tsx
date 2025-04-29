@@ -38,6 +38,7 @@ export default function page() {
           Click here
         </button>
         {fileName}
+        {duration}
         <br />
         Add text for lesson one
         <textarea
