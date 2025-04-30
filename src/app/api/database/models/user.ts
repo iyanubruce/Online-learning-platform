@@ -15,13 +15,11 @@ export const userSchema = new Schema<UserAttributes>(
     first_name: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
     last_name: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
     email: {
@@ -49,6 +47,7 @@ export const userSchema = new Schema<UserAttributes>(
   }
 );
 
-const User = mongoose.model<UserAttributes>("User", userSchema);
+const User =
+  mongoose.models.User || mongoose.model<UserAttributes>("User", userSchema);
 
 export default User;
