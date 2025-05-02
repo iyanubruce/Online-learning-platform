@@ -6,14 +6,7 @@ import { createUser, findExistingUser } from "../../database/repositories/user";
 import logger from "../../utils/logger";
 import bcrypt from "bcryptjs";
 import { userSchema } from "../../validations/user";
-
-interface UserSignupInput {
-  firstname: string;
-  lastname: string;
-  email: string;
-  password: string;
-  role: string;
-}
+import { UserSignupInput } from "../../interfaces/user";
 
 export async function POST(req: NextRequest) {
   try {
