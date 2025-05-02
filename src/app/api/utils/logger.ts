@@ -13,25 +13,7 @@ const logger = winston.createLogger({
     new winston.transports.Console({
       format: winston.format.simple(),
     }),
-
-    new winston.transports.File({
-      filename: "logs/error.log",
-      level: "error",
-      silent: process.env.NODE_ENV === "test",
-    }),
-    new winston.transports.File({
-      filename: "logs/combined.log",
-      silent: process.env.NODE_ENV === "test",
-    }),
   ],
 });
-
-if (process.env.NODE_ENV === "production") {
-  logger.add(
-    new winston.transports.Console({
-      format: winston.format.simple(),
-    })
-  );
-}
 
 export default logger;
