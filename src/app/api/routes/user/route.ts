@@ -28,7 +28,10 @@ export async function POST(req: NextRequest) {
     });
 
     if (userExists) {
-      return Response.json({ message: "User already exists" }, { status: 400 });
+      return NextResponse.json(
+        { message: "User already exists" },
+        { status: 400 }
+      );
     }
     const hashedPassword = await bcrypt.hash(validatedData.password, 10);
 
@@ -39,7 +42,7 @@ export async function POST(req: NextRequest) {
       email: validatedData.email.toLowerCase(),
       password: hashedPassword,
     });
-    return Response.json(user, { status: 200 });
+    return NextResponse.json(user, { status: 200 });
   } catch (error) {
     if (error instanceof z.ZodError) {
       const formattedErrors = error.errors.reduce(

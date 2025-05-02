@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Saira } from "@next/font/google";
-import { Rowdies } from "@next/font/google";
+import { Saira } from "next/font/google";
+import { Rowdies } from "next/font/google";
 import "./globals.css";
 import SessionProv from "@/components/SessionProvider/sessionProvider";
 const saira = Saira({ subsets: ["latin"], variable: "--font-Saira" });
