@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const accessToken = JWT.encode({ id: user.id });
+    const accessToken = JWT.encode({ id: user._id });
 
     await updateUser(user.id, { lastLogin: new Date() });
     const safeUser = { id: user.id, email: user.email, role: user.role };
