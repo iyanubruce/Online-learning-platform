@@ -21,6 +21,8 @@ export const handleError = (error: any) => {
     logger.error("Database error", error);
     return NextResponse.json({ message: "Database error" }, { status: 500 });
   }
+
+  logger.error("Internal server error", error);
   return NextResponse.json(
     { message: "Internal server error" },
     { status: 500 }
