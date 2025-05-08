@@ -29,7 +29,7 @@ export default function SignUp() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/routes/user", {
+      const res = await fetch("/api/routes/user/sign-up", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

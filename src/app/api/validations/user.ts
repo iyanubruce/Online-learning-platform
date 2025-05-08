@@ -15,10 +15,19 @@ export const passwordSchema = z
     message: "Password must contain at least one special character",
   });
 
-export const userSchema = z.object({
-  firstname: z.string().min(1),
-  lastname: z.string().min(1),
-  email: z.string().email(),
-  password: passwordSchema,
-  role: z.string().min(1),
-});
+export const userSchema = z
+  .object({
+    firstname: z.string().min(1),
+    lastname: z.string().min(1),
+    email: z.string().email(),
+    password: passwordSchema,
+    role: z.string().min(1),
+  })
+  .strict();
+
+export const userLoginSchema = z
+  .object({
+    email: z.string().email(),
+    password: passwordSchema,
+  })
+  .strict();

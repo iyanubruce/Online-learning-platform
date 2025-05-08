@@ -6,6 +6,7 @@ import {
   PopulateOptions,
   SessionOperation,
 } from "mongoose";
+import bcrypt from "bcryptjs";
 
 interface FindUserOptions<T> {
   filter: FilterQuery<T>;
@@ -80,4 +81,23 @@ export const findExistingUser = async (
     data as FilterQuery<UserAttributes>,
     session ? { session } : {}
   ).lean()) as UserAttributes | null;
+};
+
+export const updateUser = async (
+  id: string,
+  user: Partial<UserAttributes>,
+  session?: ClientSession
+): Promise<void> => {
+  const updatedData: Partial<UserAttributes> = { ...user };
+
+  if (updatedData.password) {
+    const hash = await bcrypt.hash(String(updatedData.password), 10);
+    updatedData.password = hash;
+  }
+
+  await User.updateOne(
+    { _id: id },
+    { $set: updatedData },
+    session ? { session } : {}
+  );
 };

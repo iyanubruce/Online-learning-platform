@@ -28,7 +28,10 @@ export const login = createAsyncThunk(
     { rejectWithValue }
   ) => {
     try {
-      const response = await axios.post("/api/login", { email, password });
+      const response = await axios.post("/api/routes/user/login", {
+        email,
+        password,
+      });
       const { user, token } = response.data;
       localStorage.setItem("token", token); // Persist token
       return { user, token };
@@ -129,5 +132,11 @@ const authSlice = createSlice({
   },
 });
 
+export const selectUser = (state: RootState) => state.auth.user;
+export const selectToken = (state: RootState) => state.auth.token;
+export const selectIsAuthenticated = (state: RootState) =>
+  state.auth.isAuthenticated;
+export const selectLoading = (state: RootState) => state.auth.loading;
+export const selectError = (state: RootState) => state.auth.error;
 export const { resetError } = authSlice.actions;
 export default authSlice.reducer;

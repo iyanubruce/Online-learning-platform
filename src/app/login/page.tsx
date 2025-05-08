@@ -4,43 +4,31 @@ import styles from "./login.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { RootState, AppDispatch } from "@/components/store/store";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { login, resetError } from "@/components/store/authSlice";
 export default function Login() {
-  const [user, setUser] = useState({ email: "", password: "" });
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<null | string>(null);
+  const [userState, setUser] = useState({ email: "", password: "" });
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
 
+  const { user, isAuthenticated, loading, error } = useSelector(
+    (state: RootState) => state.auth
+  );
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const { email, password } = user;
-
-    try {
-      const res = await fetch("http://localhost:8080/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
-      const data = await res.json();
-      console.log(data);
-      if (!res.ok) {
-        const form = e.target as HTMLFormElement;
-        form.reset();
-        setError(data);
-        return;
-      }
-      // dispatch(setUser(data.user));
-      setError(null);
-      // router.push(`/dashboard/${data.userRole}/${data._id}`);
-    } catch (error: any) {
-      setError(error.message);
-    }
+    dispatch(resetError());
+    await dispatch(login({ ...userState }));
   };
+
+  if (isAuthenticated && user) {
+    return (
+      <div>
+        <h1>Welcome, {user.email}!</h1>
+        <button disabled={loading}>Logout</button>
+      </div>
+    );
+  }
 
   return (
     <div className="w-screen h-screen bg-[#171717] text-white flex justify-center items-center relative">
@@ -57,7 +45,7 @@ export default function Login() {
             name="email"
             placeholder="Enter your username or email"
             required
-            onChange={(e) => setUser({ ...user, email: e.target.value })}
+            onChange={(e) => setUser({ ...userState, email: e.target.value })}
             className="bg-transparent pl-5 border rounded border-white mb-10 w-full h-9 focus:border-none text-black placeholder:text-gray-900"
           />
           <input
@@ -65,11 +53,14 @@ export default function Login() {
             name="email"
             required
             placeholder="Enter your password"
-            onChange={(e) => setUser({ ...user, password: e.target.value })}
+            onChange={(e) =>
+              setUser({ ...userState, password: e.target.value })
+            }
             className="bg-transparent pl-5 border rounded border-white w-full h-9 mb-10 text-black focus:border-none placeholder:text-gray-900"
           />
           <button
             type="submit"
+            disabled={loading}
             className="bg-btnColor w-32 h-12 text-white text-xl font-bold flex justify-center items-center rounded-2xl">
             Login
           </button>
