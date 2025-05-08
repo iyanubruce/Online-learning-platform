@@ -1,4 +1,5 @@
-import jwt from "jsonwebtoken";
+import jwt, { SignOptions } from "jsonwebtoken";
+import { StringValue } from "ms";
 import appConfig from "../config/env";
 
 export default class JWT {
@@ -10,11 +11,12 @@ export default class JWT {
     return appConfig.jwt.secret;
   }
 
-  public static encode(payload: any, expiresIn?: string | number): string {
+  public static encode(payload: any, expiresIn?: number | StringValue): string {
     const cert = this.readPrivateKey();
-    const token = jwt.sign(payload, cert, {
-      expiresIn: expiresIn || appConfig.jwt.expiresIn,
-    });
+    const options: SignOptions = {
+      expiresIn: expiresIn || (appConfig.jwt.expiresIn as StringValue),
+    };
+    const token = jwt.sign(payload, cert, options);
     return token;
   }
 
