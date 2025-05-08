@@ -4,19 +4,31 @@ import React, { ReactNode, useEffect } from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
+
+import { AppDispatch } from "@/components/store/store";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, resetError, selectAuth } from "../store/authSlice";
 interface LayoutProps {
   children: ReactNode;
 }
 
 export default function StudentLayout({ children }: LayoutProps) {
   const [isSidebarOpen, setIsSideBarOpen] = useState(false);
-  const router = usePathname();
-  const parts = router.split("/");
-  const [firstPart, secondPart, thirdPart, lastPart] = parts;
+  const router = useRouter();
+  const dispatch = useDispatch() as AppDispatch;
+  const { user, isAuthenticated, loading, error } = useSelector(selectAuth);
 
-  // Assign the last part to a variable
-  const username = lastPart;
-  console.log("Last part:", username);
+  const handleLogout = () => {
+    dispatch(resetError());
+    dispatch(logout());
+  };
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push("/login");
+    }
+  }, [isAuthenticated]);
+
   return (
     <div className="w-screen h-screen grid grid-cols-12 grid-rows-12 ">
       {/* Navbar */}
@@ -99,7 +111,7 @@ export default function StudentLayout({ children }: LayoutProps) {
               <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
               <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
             </svg>
-            <Link href={`/dashboard/student/${username}`}>DashBoard</Link>
+            <Link href={`/dashboard/student/`}>DashBoard</Link>
           </div>
           <div className="flex pl-5 gap-3 text-gray-400 hover:text-pink-600 cursor-pointer">
             <span>
@@ -138,7 +150,7 @@ export default function StudentLayout({ children }: LayoutProps) {
             <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
             <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
           </svg>
-          <Link href={`/dashboard/student/${username}`}>DashBoard</Link>
+          <Link href={`/dashboard/student/`}>DashBoard</Link>
         </div>
         <div className="flex pl-5 gap-3 text-gray-400 hover:text-pink-600">
           <span>
@@ -157,7 +169,7 @@ export default function StudentLayout({ children }: LayoutProps) {
               />
             </svg>
           </span>
-          <Link href={`/dashboard/student/${username}/courses`}>Courses</Link>
+          <Link href={`/dashboard/student//courses`}>Courses</Link>
         </div>
       </div>
       <main className=" row-span-11 col-span-12 lg:col-span-10 overflow-scroll">
