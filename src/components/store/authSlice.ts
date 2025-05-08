@@ -5,6 +5,8 @@ import { userRoles } from "../constants/user";
 
 interface AuthState {
   user: {
+    first_name: string;
+    last_name: string;
     id: string;
     email: string;
     role: userRoles;
