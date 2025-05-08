@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     const safeUser = { id: user.id, email: user.email, role: user.role };
 
     return NextResponse.json(
-      { safeUser, accessToken, message: "login successful" },
+      { user: safeUser, token: accessToken, message: "login successful" },
       { status: 200 }
     );
   } catch (error: any) {

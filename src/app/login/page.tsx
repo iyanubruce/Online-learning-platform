@@ -5,15 +5,13 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { RootState, AppDispatch } from "@/components/store/store";
 import { useDispatch, useSelector } from "react-redux";
-import { login, resetError } from "@/components/store/authSlice";
+import { login, resetError, selectAuth } from "@/components/store/authSlice";
 export default function Login() {
   const [userState, setUser] = useState({ email: "", password: "" });
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
 
-  const { user, isAuthenticated, loading, error } = useSelector(
-    (state: RootState) => state.auth
-  );
+  const { user, isAuthenticated, loading, error } = useSelector(selectAuth);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,12 +20,9 @@ export default function Login() {
   };
 
   if (isAuthenticated && user) {
-    return (
-      <div>
-        <h1>Welcome, {user.email}!</h1>
-        <button disabled={loading}>Logout</button>
-      </div>
-    );
+    user.role === "student"
+      ? router.push("/dashboard/student")
+      : router.push("/dashboard/instructor");
   }
 
   return (

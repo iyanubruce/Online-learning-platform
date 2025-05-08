@@ -11,6 +11,7 @@ import bcrypt from "bcryptjs";
 import { userSchema } from "../../../validations/user";
 import { UserSignupInput } from "../../../interfaces/user";
 import { handleError } from "../../../helpers/errorhandler";
+
 export async function POST(req: NextRequest) {
   try {
     await connectDB();

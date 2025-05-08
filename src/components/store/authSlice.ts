@@ -1,10 +1,14 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { RootState } from "./store";
+import { userRoles } from "../constants/user";
 
-// Define the shape of the auth state
 interface AuthState {
-  user: { id: string; email: string } | null;
+  user: {
+    id: string;
+    email: string;
+    role: userRoles;
+  } | null;
   token: string | null;
   isAuthenticated: boolean;
   loading: boolean;
@@ -32,6 +36,7 @@ export const login = createAsyncThunk(
         email,
         password,
       });
+      console.log(response);
       const { user, token } = response.data;
       localStorage.setItem("token", token); // Persist token
       return { user, token };
@@ -61,7 +66,7 @@ export const fetchCurrentUser = createAsyncThunk(
   async (_, { rejectWithValue, getState }) => {
     try {
       const state = getState() as RootState;
-      const response = await axios.get("/api/me", {
+      const response = await axios.get("/api/routes/user", {
         headers: { Authorization: `Bearer ${state.auth.token}` },
       });
       return response.data.user;
@@ -132,11 +137,6 @@ const authSlice = createSlice({
   },
 });
 
-export const selectUser = (state: RootState) => state.auth.user;
-export const selectToken = (state: RootState) => state.auth.token;
-export const selectIsAuthenticated = (state: RootState) =>
-  state.auth.isAuthenticated;
-export const selectLoading = (state: RootState) => state.auth.loading;
-export const selectError = (state: RootState) => state.auth.error;
+export const selectAuth = (state: RootState) => state.auth;
 export const { resetError } = authSlice.actions;
 export default authSlice.reducer;
