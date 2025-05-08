@@ -2,7 +2,7 @@
 import { Provider } from "react-redux";
 import { store } from "../store/store";
 import { ReactNode } from "react";
-import AuthInitializer from "../store/authinittializer";
+import AuthInitializer from "../store/auth-initializer";
 interface ReduxProviderProps {
   children: ReactNode;
 }
