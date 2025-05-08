@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="m-0">
+      <div className="m-0 bg-white">
         <Navbar dark={darkMode} />
         {/* Hero Section */}
         <div

@@ -8,8 +8,7 @@ type dark = {
 const Navbar = ({ dark }: dark) => {
   return (
     <div
-      className={`w-full text-white pt-4 pb-5  ${dark ? "bg-[#161616]" : ""}`}
-    >
+      className={`w-full bg-inherit text-white pt-4 pb-5  ${dark ? "bg-[#161616]" : ""}`}>
       <div className={`${styles.icont} saira text-base`}>
         <Link href={"/"}>
           <span className={`${styles.logo}`}>
@@ -18,11 +17,9 @@ const Navbar = ({ dark }: dark) => {
         </Link>
         <Link
           href={`/courses`}
-          className={`p-0 mx-auto flex gap-2 items-center`}
-        >
+          className={`p-0 mx-auto flex gap-2 items-center`}>
           <span
-            className={`font-medium ${dark ? "text-white" : "text-[#1B2336]"} `}
-          >
+            className={`font-medium ${dark ? "text-white" : "text-[#1B2336]"} `}>
             Courses
           </span>
           <span>
@@ -31,8 +28,7 @@ const Navbar = ({ dark }: dark) => {
               height="20px"
               viewBox="0 -960 960 960"
               width="20px"
-              fill={`${dark ? "white" : "black"}`}
-            >
+              fill={`${dark ? "white" : "black"}`}>
               <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
             </svg>
           </span>
