@@ -17,7 +17,7 @@ export default function StudentLayout({ children }: LayoutProps) {
   const router = useRouter();
   const dispatch = useDispatch() as AppDispatch;
   const { user, isAuthenticated, loading, error } = useSelector(selectAuth);
-
+  const [viewLogout, setViewLogout] = useState(false);
   const handleLogout = () => {
     dispatch(resetError());
     dispatch(logout());
@@ -28,7 +28,9 @@ export default function StudentLayout({ children }: LayoutProps) {
       router.push("/login");
     }
   }, [isAuthenticated]);
-
+  if (!user) {
+    return <div className="grid place-content-center">loading...</div>;
+  }
   return (
     <div className="w-screen h-screen grid grid-cols-12 grid-rows-12 ">
       {/* Navbar */}
@@ -80,13 +82,42 @@ export default function StudentLayout({ children }: LayoutProps) {
             placeholder="Search Courses...."
           />
         </div>
-        <Image
-          src="/circle-user-round.svg"
-          className="ml-auto"
-          width={40}
-          height={40}
-          alt="User"
-        />
+
+        <div className="ml-auto relative">
+          <Image
+            src="/circle-user-round.svg"
+            className="ml-auto"
+            width={40}
+            height={40}
+            alt="User"
+            onClick={() => setViewLogout(!viewLogout)}
+          />
+          {viewLogout && (
+            <div className=" absolute bg-[#161616] left-[-70px] flex p-3 rounded-[20px] pl-5 gap-3 text-gray-400 hover:text-pink-600 cursor-pointer">
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17 16L21 12M21 12L17 8M21 12L7 12M13 16V17C13 18.6569 11.6569 20 10 20H6C4.34315 20 3 18.6569 3 17V7C3 5.34315 4.34315 4 6 4H10C11.6569 4 13 5.34315 13 7V8"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
+              <button onClick={handleLogout}>
+                Logout
+                {loading && (
+                  <span className="loader ml-3 absolute w-4 h-4 border-2 border-t-transparent border-white rounded-full animate-spin" />
+                )}
+              </button>
+            </div>
+          )}
+        </div>
 
         {/* Mobile Sidebar */}
         <div

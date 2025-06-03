@@ -53,7 +53,6 @@ export const logout = createAsyncThunk(
   "auth/logout",
   async (_, { rejectWithValue }) => {
     try {
-      await axios.post("/api/logout");
       localStorage.removeItem("token"); // Clear token
       return null;
     } catch (error: any) {
