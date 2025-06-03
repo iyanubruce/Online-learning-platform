@@ -50,9 +50,9 @@ export default function HomeVideo() {
             viewBox="0 0 24 24"
             fill="white"
             stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="lucide lucide-play"
           >
             <polygon points="6 3 20 12 6 21 6 3" />

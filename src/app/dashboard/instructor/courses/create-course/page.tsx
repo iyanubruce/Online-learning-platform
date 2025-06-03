@@ -79,22 +79,25 @@ export default function page() {
                   id="imageUpload"
                   accept="image/*"
                   className="hidden"
-                  onChange={handleImageChange}></input>
+                  onChange={handleImageChange}
+                ></input>
                 <button
                   onClick={(e) => {
                     e.preventDefault();
                     inputRef.current?.click();
                   }}
-                  className="flex aspect-square w-[113px] mx-auto mt-[20px] items-center justify-center rounded-md border border-dashed">
+                  className="flex aspect-square w-[113px] mx-auto mt-[20px] items-center justify-center rounded-md border border-dashed"
+                >
                   <svg
                     className="h-4 w-4 text-muted-foreground"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round">
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
                     <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
                     <polyline points="16 6 12 2 8 6"></polyline>
                     <line x1="12" y1="2" x2="12" y2="15"></line>
@@ -118,29 +121,35 @@ export default function page() {
                 <label
                   htmlFor="category"
                   className="bg-transparent border broder-white rounded"
-                  aria-label="select category">
+                  aria-label="select category"
+                >
                   <select
                     id="category"
-                    className="w-full bg-transparent border broder-white rounded">
+                    className="w-full bg-transparent border broder-white rounded"
+                  >
                     <option
                       className="bg-[#161616] border broder-white rounded"
                       value=""
-                      disabled>
+                      disabled
+                    >
                       select category
                     </option>
                     <option
                       className="bg-[#161616] border broder-white rounded"
-                      value="clothing">
+                      value="clothing"
+                    >
                       Programming
                     </option>
                     <option
                       className="bg-[#161616] border broder-white rounded"
-                      value="electronics">
+                      value="electronics"
+                    >
                       web development
                     </option>
                     <option
                       className="bg-[#161616] border broder-white rounded"
-                      value="accessories">
+                      value="accessories"
+                    >
                       tech
                     </option>
                   </select>
@@ -153,7 +162,8 @@ export default function page() {
                       `/dashboard/instructor/courses/create-course/newlesson/`
                     )
                   }
-                  className="bg-pink-600 text-lg p-2 rounded flex items-center font-bold mt-8 gap-3 w-">
+                  className="bg-pink-600 text-lg p-2 rounded flex items-center font-bold mt-8 gap-3 w-"
+                >
                   <span>Next</span>
                   <span>
                     <svg
@@ -161,7 +171,8 @@ export default function page() {
                       height="24px"
                       viewBox="0 -960 960 960"
                       width="24px"
-                      fill="#e8eaed">
+                      fill="#e8eaed"
+                    >
                       <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
                     </svg>
                   </span>

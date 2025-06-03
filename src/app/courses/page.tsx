@@ -20,11 +20,11 @@ export default function Courses() {
           width="24"
           height="24"
           viewBox="0 0 24 24"
-          fill='none'
-          stroke={`${darkMode ? "white" :"black"}`}
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          fill="none"
+          stroke={`${darkMode ? "white" : "black"}`}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide lucide-sun-moon"
         >
           <path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4" />
@@ -38,7 +38,7 @@ export default function Courses() {
           <path d="m19.1 4.9-1.4 1.4" />
         </svg>
       </button>
-      <Navbar dark={darkMode}/>
+      <Navbar dark={darkMode} />
       <div className="flex items-center flex-col gap-4">
         <span
           className={`flex items-center ${darkMode ? "bg-searchGray" : "bg-slate-100"} p-3 rounded-3xl mt-12 w-96`}
