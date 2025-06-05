@@ -2,13 +2,9 @@
 import { useState, useRef, useEffect } from "react";
 import React from "react";
 import Image from "next/image";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 export default function page() {
   const router = useRouter();
-  const route = usePathname();
-  const parts = route.split("/");
-  const [firstPart, secondPart, thirdPart, lastPart] = parts;
-  const username = lastPart;
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [imageSrc, setImageSrc] = useState<string>("/Herowithoutbg.svg");
 
@@ -18,6 +14,7 @@ export default function page() {
     if (file) {
       const newImageUrl = URL.createObjectURL(file);
       setImageSrc(newImageUrl);
+      localStorage.setItem("courseImage", newImageUrl); // Store the image URL in local storage
     }
   };
 
